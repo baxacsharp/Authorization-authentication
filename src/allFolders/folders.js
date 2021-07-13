@@ -1,0 +1,11 @@
+import express from "express";
+import AuthorsRoutes from "../allFolders/Authors/authors.js";
+import BlogsRouter from "../allFolders/blogs/blogs.js";
+import categoryRouter from "../allFolders/Categories/categories.js";
+import commentsRouter from "../allFolders/Comments/comments.js";
+const router = express.Router();
+router.use("/authors", AuthorsRoutes);
+router.use("/blogs", BlogsRouter);
+router.use("/category", categoryRouter);
+router.use("/comments", commentsRouter);
+export default router;
